@@ -33,12 +33,71 @@ html,
 }
 
 .toolbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  align-items: center;
+  height: 100px;
 }
 
 .toolbar span {
   color: white;
+}
+
+.toolbar-input-wrapper {
+  width: 42%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-undo-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  align-items: center;
+  flex-direction: row;
+}
+
+.button {
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:bold;
+  border: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: .5;
+}
+
+.add {
+  background-color: #8AD2F9;
+  color: #517B92;
+}
+
+.remove {
+  background-color: #EFEFF0;
+  color: #7A7A7A;
+}
+
+.history-icon {
+  cursor: pointer;
+}
+
+.history-icon:hover > svg {
+  stroke: #7A7A7A;
+}
+
+.icon-disabled {
+  pointer-events: none;
+  opacity: .7;
+}
+
+.span-disabled {
+  pointer-events: none;
+  color:#7A7A7A !important;
 }

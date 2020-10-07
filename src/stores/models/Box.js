@@ -7,9 +7,21 @@ const BoxModel = types
     height: 100,
     color: "#FFF000",
     left: 200,
-    top: 100
+    top: 100,
+    selected: false
   })
   .views(self => ({}))
-  .actions(self => ({}));
+  .actions(self => ({
+    toggleSelected() {
+      self.selected = !self.selected
+    },
+    changeColor(color) {
+      self.color = color
+    },
+    setPosition(position) {
+      self.top = position.y
+      self.left = position.x
+    }
+  }));
 
 export default BoxModel;

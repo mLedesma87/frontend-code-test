@@ -2,8 +2,10 @@ import React from "react";
 
 import { observer } from "mobx-react";
 import Box from "../components/Box";
+import { useStore } from "../stores/MainStore"
 
-function Canvas({ store }) {
+function Canvas() {
+  const store = useStore();
   return (
     <div className="canva">
       {store.boxes.map((box, index) => (
